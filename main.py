@@ -9,6 +9,11 @@ app = Flask(
 
 @app.route('/')
 def index():
-    return 'hi'
+    return render_template('base.html')
+
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html')
 
 app.run(debug=True, host='0.0.0.0')
