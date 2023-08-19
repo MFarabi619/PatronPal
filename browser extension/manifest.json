@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Watchtime Tracker",
+    "version": "1.0",
+    "description": "Track your watchtime on YouTube and support content creators.",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}

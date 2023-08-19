@@ -11,4 +11,4 @@ app = Flask(
 def index():
     return 'hi'
 
-app.run(debug=True)
+app.run(debug=True, host='0.0.0.0')
