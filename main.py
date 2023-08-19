@@ -8,12 +8,22 @@ app = Flask(
 )
 
 @app.route('/')
-def index():
-    return render_template('base.html')
-
-
-@app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
+
+
+@app.route('/analytics')
+def analytics():
+    return render_template('analytics.html')
+
+
+@app.route('/customize')
+def customize():
+    return render_template('customize.html')
+
+
+@app.route('/history')
+def history():
+    return render_template('history.html')
 
 app.run(debug=True, host='0.0.0.0')
