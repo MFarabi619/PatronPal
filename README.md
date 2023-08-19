@@ -3,6 +3,7 @@ Project submission for Hack the 6ix hackathon at Toronto Metropolitan University
 
 
 Inspiration:
+
 Creators are now more than ever asking for Patreons, donations, and support. But the vast majority of consumers don’t partake in this. 
 This isn’t because consumers don’t want to support their favourite creators - it’s just that the cost of doing so would be astronomically high. 
 $10 for 15 creators per month leads to $150 a month - no one wants to pay THAT much… especially now with inflation and the job market. 
@@ -14,6 +15,7 @@ This lets consumers feel good about themselves for supporting their favourite cr
 
 
 What it does:
+
 Our project aims to help consumers support their favourite creators affordably. 
 The browser extension pulls data from supported platforms (such as, but not limited to Youtube, Medium, and Substack) and calculates analytics. 
 To combat certain creators uploading/posting much more frequently than others, the application checks how frequently the creator uploads and weighs that against how much you watch that creator. 
@@ -28,18 +30,21 @@ However, with it being almost fully customizable, the user has the final say in 
 
 
 How we built it:
+
 We built it using a front-end built with HTML, CSS, with tailwind framework. The back-end was built through Flask and Python. 
 
 
-Challenges we ran into
+Challenges we ran into:
 
 
-Accomplishments that we're proud of
+Accomplishments that we're proud of:
 
 
-What we learned
+What we learned:
+
 We dived deeper into how to use tailwind and integrate Flask and other products together. 
 
 
-What’s next for PatronPal
+What’s next for PatronPal:
+
 Calculating how to split up the “pie” using more metrics so that it could be better reflective of what the user would want to pay each creator if they had the time to allocate their dollars. 
