@@ -2,6 +2,7 @@
 Project submission for Hack the 6ix hackathon at Toronto Metropolitan University.
 
 
+
 Inspiration:
 
 Creators are now more than ever asking for Patreons, donations, and support. But the vast majority of consumers don’t partake in this. 
@@ -12,6 +13,7 @@ This led to us coming up with an idea for consumers to set aside a certain amoun
 This could be something as low as $5 - $10. The application would then automatically allocate the money. 
 The user, of course, will be able to customize everything and have the final say in where their money goes. 
 This lets consumers feel good about themselves for supporting their favourite creators while not breaking the bank.
+
 
 
 What it does:
@@ -29,20 +31,25 @@ This amount is not adjusted by our metrics, and our application works with the r
 However, with it being almost fully customizable, the user has the final say in where their money goes.
 
 
+
 How we built it:
 
 We built it using a front-end built with HTML, CSS, with tailwind framework. The back-end was built through Flask and Python. 
 
 
+
 Challenges we ran into:
+
 
 
 Accomplishments that we're proud of:
 
 
+
 What we learned:
 
 We dived deeper into how to use tailwind and integrate Flask and other products together. 
+
 
 
 What’s next for PatronPal:
