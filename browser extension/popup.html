@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            #beside > * {
+                vertical-align:middle;
+            }
+            
+            body {
+                background-color:linen;
+                font-size: 100%;
+                min-width: 300px;
+            }
+        </style>
+    </head>
   <body>
-    <h1>Hello Extensions</h1>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="popup.js"></script>
+    <h1>PatronPal</h1>
+    <p>Support your favourite creators, your way.</p>
+    <div id="beside">
+        <div style="display: inline-block; width:66%;">
+            <h2 style="margin: 0; padding: 0;">Status: Active</h2>
+            <p style="margin: 0; padding: 0; margin-top: 5px;"><em>The extension is currently recording your watch time.</em></p>
+        </div>
+        <img style="display: inline-block; margin-left: 10px;" height="66" width="auto" src="https://cdn-icons-png.flaticon.com/512/5610/5610944.png" alt="Checked"/>
+    </div>
+    <p>You can view your current creator breakdown in the web application, as well as your analytics and history.</p>
   </body>
 </html>
