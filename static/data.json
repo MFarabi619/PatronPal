@@ -1,25 +1,27 @@
 {
     "money": 15,
-    "watch": [
-        {
-            "creator": "JusReign",
-            "videos": {
-                "38fhhHFefhJ": 144,
-                "twePyNuNRR8": 1000,
-                "ReE8KmNxamv": 1342,
-                "rf9q1DMgeHQ": 1039,
-                "e4nqSSYUfIU": 724
-            }
+    "watch": {
+        "JusReign": {
+            "38fhhHFefhJ": 144,
+            "twePyNuNRR8": 1000,
+            "ReE8KmNxamv": 1342,
+            "rf9q1DMgeHQ": 1039,
+            "e4nqSSYUfIU": 724
         },
-        {
-            "creator": "Nonstop Dan",
-            "videos": {
-                "38fhhHFefhJ": 655,
-                "twePyNuNRR8": 245,
-                "ReE8KmNxamv": 752,
-                "rf9q1DMgeHQ": 124,
-                "e4nqSSYUfIU": 436
-            }
-        }
-    ]
+        "Nonstop Dan": {
+            "38fhhHFefhJ": 655,
+            "twePyNuNRR8": 245,
+            "ReE8KmNxamv": 752,
+            "rf9q1DMgeHQ": 124,
+            "e4nqSSYUfIU": 436
+        },
+        "Erik Conover": {
+            "Lxiv4tBK4YE": 7,
+            "X4-om87huxI": 176,
+            "3yyjuB_y0GM": 15,
+            "WgMrfNkt-N4": 368,
+            "3V1tX8Fa_HE": 364
+        },
+        "TSN": {}
+    }
 }

@@ -72,9 +72,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="m1 9 4-4-4-4"
-                  /></svg
-              ></a>
+                    d="m1 9 4-4-4-4"/></svg></a>
             </div>
             <div data-popper-arrow></div>
           </div>
@@ -247,9 +245,17 @@
   <script>
     // ApexCharts options and config
     window.addEventListener("load", function () {
+      let series = [];
+      let labels = [];
+
+      {% for creator in watch_data %}
+        series.push(parseFloat("{{ watch_data[creator] }}"));
+        labels.push("{{ creator }}");
+      {% endfor %}
+
       const getChartOptions = () => {
         return {
-          series: [52.8, 26.8, 20.4],
+          series: series,
           colors: ["#1C64F2", "#16BDCA", "#9061F9"],
           chart: {
             height: 420,
@@ -271,7 +277,7 @@
               },
             },
           },
-          labels: ["Kurzgesagt", "Mark Rober", "Fireship"],
+          labels: labels,
           dataLabels: {
             enabled: true,
             style: {
@@ -285,14 +291,14 @@
           yaxis: {
             labels: {
               formatter: function (value) {
-                return value + "%";
+                return "$" + value;
               },
             },
           },
           xaxis: {
             labels: {
               formatter: function (value) {
-                return value + "%";
+                return "$" + value;
               },
             },
             axisTicks: {

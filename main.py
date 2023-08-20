@@ -12,21 +12,49 @@ app = Flask(
 
 def get_kv_data(key):
     r = requests.get(f'https://keyvalue.immanuel.co/api/KeyVal/GetValue/{app_id}/{key}')
-    return r.text
+    print(r.text[1:-1])
+    return r.text[1:-1]
 
 
 @app.route('/')
 def dashboard():
     all_creators = get_kv_data('allcreators').split(',')
-    with open(url_for('static', filename='data.json'), 'r') as f:
+    with open('static/data.json', 'r') as f:
         cjson = json.loads(f.read())
 
     for creator in all_creators:
-        creator_data = { 'creator': creator }
+        print(creator)
         all_ids = get_kv_data(creator).split(',')
+        all_ids = [e for e in all_ids if e != '']
         print(all_ids)
+        cjson['watch'][creator] = {}
+        for id in all_ids:
+            cjson['watch'][creator][id] = int(get_kv_data(id))
+    
+    with open('static/data.json', 'w+') as f:
+        f.truncate(0)
+        f.write(json.dumps(cjson, indent=4))
 
-    return render_template('dashboard.html')
+    watch_data = {}
+
+    tot_sec = 0
+
+    for creator in cjson['watch']:
+        watch_data[creator] = 0
+        for id in cjson['watch'][creator]:
+            watch_data[creator] += cjson['watch'][creator][id]
+        if watch_data[creator] == 0:
+            del watch_data[creator]
+        else:
+            tot_sec += watch_data[creator]
+        
+        
+    for creator in watch_data:
+        watch_data[creator] = round(watch_data[creator] / tot_sec * 15, 2)
+
+    print(watch_data)
+
+    return render_template('dashboard.html', watch_data=watch_data)
 
 
 @app.route('/moreinfo')
