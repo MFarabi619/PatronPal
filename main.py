@@ -29,9 +29,9 @@ def dashboard():
     return render_template('dashboard.html')
 
 
-@app.route('/analytics')
+@app.route('/moreinfo')
 def analytics():
-    return render_template('analytics.html')
+    return render_template('moreinfo.html')
 
 
 @app.route('/customize')

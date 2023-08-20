@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% block content %}
+<div class="mx-8">
+  <section
+    href="#"
+    class="block max-w-md p-6 bg-white border rounded-lg shadow dark:bg-gray-800 border-gray-700"
+  >
+    <h1
+      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+    >
+      Customize
+    </h1>
+
+    <section class="flex items-center">
+      <span class="text-white pr-2">Monthly total amount: </span>
+      <textarea
+        id="amounttext"
+        rows="1"
+        class="block pl-1 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 resize-none"
+        placeholder="$"
+      ></textarea>
+    </section>
+
+    <p class="font-normal text-white">
+      Your next billing cycle: <span class="text-orange-500"> mm/dd/yyyy </span>
+    </p>
+
+    <h3 class="text-xl font-bold tracking-tight text-white mt-4">
+      Constant amounts
+    </h3>
+    <p class="text-gray-300 text-sm pb-1">
+      Pay out a constant amount to certain creators
+    </p>
+
+    <section class="flex items-center space-x-2">
+      <textarea
+        id="ytID"
+        rows="1"
+        class="inline pl-1 text-sm text-gray-900 bg-gray-50 rounded-lg border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 resize-none"
+        placeholder="@PatronPal_ID"
+      ></textarea>
+      <textarea
+        id="ytID"
+        rows="1"
+        class="inline pl-1 text-sm text-gray-900 bg-gray-50 rounded-lg border dark:bg-gray-700 dark:border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 resize-none"
+        placeholder="Number"
+      ></textarea>
+
+      <button
+        id="dropdownHoverButton"
+        data-dropdown-toggle="dropdownHover"
+        data-dropdown-trigger="hover"
+        class="inline text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-0.5 text-center inline-flex items-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 transition ease-in-out duration-500"
+        type="button"
+      >
+        %
+        <svg
+          class="w-2.5 h-2.5 ml-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"
+          />
+        </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdownHover"
+        class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-12 bg-gray-700"
+      >
+        <ul
+          class="py-1 text-sm text-gray-200 hover:cursor-pointer"
+          aria-labelledby="dropdownHoverButton"
+        >
+          <li>
+            <a
+              href="#"
+              class="px-2"
+              >$</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+</div>
+
+{% endblock %}
