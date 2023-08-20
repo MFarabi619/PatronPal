@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
 
     <head>
       <body class="bg-gray-600">
         <nav class="border-gray-200 bg-gray-900">
-          <div
-            class="flex flex-wrap items-center justify-between mx-4 p-4"
-          >
+          <div class="flex flex-wrap items-center justify-between mx-4 p-4">
             <a href="{{ url_for('dashboard') }}" class="flex items-center">
               <img
                 src="{{url_for('static', filename='img/logo.png')}}"
@@ -23,14 +24,74 @@
             </a>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul
-                class="font-medium flex flex-col px-3 py-1 mt-2 rounded-lg hover:bg-gray-50 hover:cursor-pointer group transition ease-in-out duration-500"
+                class="font-medium flex px-3 py-1 mt-2 rounded-lg  group transition ease-in-out duration-500"
               >
                 <li>
                   <a
                     href="{{ url_for('dashboard') }}"
-                    class="text-white transition ease-in-out duration-500 group-hover:text-blue-600"
+                    class="text-white transition ease-in-out duration-500 group-hover:text-blue-600 hover:bg-gray-50 hover:cursor-pointer rounded-lg px-2 py-1"
                     >Home</a
                   >
+                </li>
+                <li>
+                  <button
+                    id="dropdownUserAvatarButton"
+                    data-dropdown-toggle="dropdownAvatar"
+                    class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    type="button"
+                  >
+                    <span class="sr-only">Open user menu</span>
+                    <img
+                      class="w-8 h-8 rounded-full object-cover"
+                      src="/static/img/person.webp"
+                      alt="user photo"
+                    />
+
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownAvatar"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                  >
+                    <div
+                      class="px-4 py-3 text-sm text-gray-900 dark:text-white"
+                    >
+                      <div>Bonnie Green</div>
+                      <div class="font-medium truncate">bgreen@gmail.com</div>
+                    </div>
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownUserAvatarButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Settings</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Preferences</a
+                        >
+                      </li>
+                    </ul>
+                    <div class="py-2">
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                        >Sign out</a
+                      >
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -38,14 +99,13 @@
         </nav>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-        
-        {% block content %} {% endblock %}
 
+        {% block content %} {% endblock %}
       </body>
 
-        <!-- Ignore below - just a base -->
+      <!-- Ignore below - just a base -->
 
-        <!-- <!DOCTYPE html>
+      <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
