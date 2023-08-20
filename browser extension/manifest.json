@@ -1,15 +1,17 @@
 {
   "manifest_version": 3,
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
-  "permissions": ["storage", "activeTab", "scripting"],
+  "name": "PatronPal",
+  "description": "Support your favourite creators, your way.",
+  "permissions": ["storage", "activeTab", "scripting", "alarms"],
   "version": "0.1.0",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "hello_extensions.png"
+    "default_icon": "logo.png"
   },
-  "background": {
-    "service_worker": "popup.js",
-    "type": "module"
-  }
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/watch?v=*"],
+      "js": ["popup.js"]
+    }
+  ]
 }
