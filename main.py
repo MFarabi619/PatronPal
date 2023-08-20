@@ -58,7 +58,7 @@ def dashboard():
 
 
 @app.route('/moreinfo')
-def analytics():
+def moreinfo():
     return render_template('moreinfo.html')
 
 
